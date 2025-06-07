@@ -22,9 +22,9 @@ export default function Display() {
       setLoading(true);
       setError(null);
 
-      const apiMap: Record<string, string> = {
-          'WeatherAPI': 'http://localhost:8080/weather/wttr/current',
-          'Open-Meteo': 'http://localhost:8080/weather/metno/current',
+    const apiMap: Record<string, string> = {
+      'Wttr.in': 'http://localhost:8080/weather/wttr/current',
+      'Met.no': 'http://localhost:8080/weather/metno/current',
       };
       const url = `${apiMap[selectedApi]}?location=${encodeURIComponent(location)}&day=${day}`;
 
@@ -48,7 +48,7 @@ export default function Display() {
         setWeatherData(formattedData);
       } catch (error) {
         console.error('Error fetching weather:', error);
-        setError('Не удалось загрузить данные о погоде');
+        setError('Failed to load weather data');
         setWeatherData(null);
       } finally {
         setLoading(false);

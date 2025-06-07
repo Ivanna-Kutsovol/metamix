@@ -13,7 +13,7 @@ type WeatherApiContextType = {
 const WeatherApiContext = createContext<WeatherApiContextType | undefined>(undefined);
 
 export const WeatherApiProvider = ({ children }: { children: ReactNode }) => {
-  const [selectedApi, setSelectedApi] = useState('WeatherAPI'); 
+  const [selectedApi, setSelectedApi] = useState('Wttr.in');
   const [day, setDay] = useState<DayType>('today');
 
   return (

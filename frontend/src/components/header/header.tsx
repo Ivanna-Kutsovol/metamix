@@ -11,7 +11,7 @@ export default function Header() {
     const [activeIndex, setActiveIndex] = useState<number | null>(null);
     const { selectedApi, setSelectedApi, day, setDay } = useWeatherApi();
 
-    const apiOptions = ['WeatherAPI', 'Open-Meteo'];
+    const apiOptions = ['Wttr.in', 'Met.no'];
 
     const handleApiSelect = (api: string) => {
         setSelectedApi(api);
