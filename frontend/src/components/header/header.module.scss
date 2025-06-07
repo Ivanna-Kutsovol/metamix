@@ -1,0 +1,71 @@
+.header{
+    padding: 50px 100px ;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    &__title{
+        font-size: 40px;
+        margin-left: 20px;
+    }
+
+    &__menu{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-left: auto;
+        gap: 20px;
+    }
+
+    &__item{
+        font-size: 30px;
+        cursor: pointer;
+        font-weight: lighter;
+    }
+
+    &__open,
+    &__close{
+        font-size: 27px;
+        background-color: #fff;
+        color: var(--background);
+        padding: 5px;
+        border: none;
+        cursor: pointer;
+        position: relative;
+        width: 200px;
+    }
+
+    &__active{
+        font-weight: bold;
+        font-size: 30px;
+    }
+    &__open{
+        border-radius: 10px;
+    }
+    &__close{
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+    &__itemDropdown{
+        font-size: 20px;
+        font-weight: 500;
+    }
+    &__dropdown{
+        position: absolute;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        background-color: #fff;
+        color: var(--background);
+        width: 200px;
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        padding: 10px;
+        gap: 20px;
+        align-items: center;
+    }
+}
